@@ -1,10 +1,10 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import {SearchComponent} from './Components/SearchComponent';
+import './css/App.css';
 
 function App() {
   return (
-    <div>
+    <div id="wrap">
       <SearchComponent/>
     </div>
   )

@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import { Container, Row, Col, Form,FormGroup, Label, Input, ButtonToggle  } from 'reactstrap';
+import { Input, ButtonToggle  } from 'reactstrap';
 import {CardComponent} from './CardComponent'
 import { useLazyQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
@@ -14,8 +14,10 @@ const GET_PLAYLIST = gql`
                 high {
                     url
                 }
-            }
+            },
+            videoId
         }
+
     }
 `;
 
@@ -28,36 +30,28 @@ export function SearchComponent () {
 
     const searchYoutube = () => {
         const form = titleForm.current;
-        console.log(form['title'].value);
         setTitle(form['title'].value);
         getYoutube();
     }
 
     if(loading) return <p>Loading...</p>;
     return (
-        <Container className="themed-container">
-            <Row>
-            <Col>
-                <Form>
-                <FormGroup>
-                    <Label for="search">Search Title</Label>
-                    <form ref={titleForm}>
-                        <Input type="value" name='title' placeholder="place searchName" />
-                    </form>
-                    </FormGroup>
-                </Form>
-            </Col>
-            <Col>
-            <div>
+        <div>
+            <div className="wrap_keyword_name ">
+                <form ref={titleForm}>
+                    <Input type="value" name='title' placeholder="place searchName" />
+                </form>
                 <ButtonToggle color="primary" onClick={(e)=>searchYoutube()}>primary</ButtonToggle>{' '}
+            </div>
+            <main>
+                <div className="wrap_contents">
+                    <div className="wrap_article">
+                        <div className="wrap_article_list #keyword_related_contents">
+                            <CardComponent playlist={data} />
+                        </div>
+                    </div>
                 </div>
-            </Col>
-            </Row>
-            <Row>
-            <Col>
-                <CardComponent playlist={data} />
-            </Col>
-            </Row>
-        </Container>
+            </main>
+        </div>
     )
 }
