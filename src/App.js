@@ -1,11 +1,11 @@
 import React from 'react';
-import {SearchComponent} from './Components/SearchComponent';
-import './css/App.css';
+import {LayoutComponent} from './Components/LayoutComponent';
+import './css/paper.css';
 
 function App() {
   return (
     <div id="wrap">
-      <SearchComponent/>
+      <LayoutComponent/>
     </div>
   )
 }

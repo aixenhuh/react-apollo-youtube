@@ -76,7 +76,7 @@ a {
     text-decoration: none;
 }
 
-li {
+.li  {
     display: list-item;
     text-align: -webkit-match-parent;
 }
@@ -132,7 +132,7 @@ li {
 
 .wrap_article_list .list_article .wrap_sub_content {
     display: -webkit-box;
-    max-height: 42px;
+    /* max-height: 42px; */
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -219,3 +219,64 @@ fieldset, img {
     background-color: #aaa;
     vertical-align: top;
 }
+
+.wrap_content {
+    display: flex;
+    height : 100%;
+}
+
+.wrap_item1 {
+    flex :1;
+}
+
+.wrap_item2 {
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.wrap_main_content {
+    position: relative;
+    width: 80%;
+    height:100%;
+    margin: 0 auto;
+    padding: 40px 0 0;
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.wrap_main_item1 {
+    flex:0;
+    align-self : center;
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:30px;
+}
+
+
+.wrap_main_item2 {
+    flex:-1;
+    align-self : center;
+}
+
+.card-img {
+    margin : 0px auto;
+    width: 80%;
+}
+
+.progressBar {
+    display: flex;
+    height:100%;
+    flex-direction: column;
+}
+
+.progressItem {
+    flex:1;
+    vertical-align: center;
+    align-self: center;
+}
+
