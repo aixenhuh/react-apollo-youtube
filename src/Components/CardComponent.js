@@ -11,10 +11,10 @@ export function CardComponent (props) {
                     I also made a <a href="https://us-central1-vuewebserver-88b2a.cloudfunctions.net/graphYoutubeServer"><span class="text-secondary">server page</span></a> using ApolloServer and GraphQL. I'm running on Firebase Function and calling this site.<br/>
                     
                 </p>
-                <iframe title="server" src="https://us-central1-vuewebserver-88b2a.cloudfunctions.net/graphYoutubeServer" width="100%" height="900px"></iframe>
+                <iframe title="server" src="https://us-central1-vuewebserver-88b2a.cloudfunctions.net/graphYoutubeServer" width="80%" height="800px"></iframe>
                 <p class="text-lead">
-                I used the following techniques.
-                    Thank you.
+                I used the following techniques. Also use <a href="https://www.getpapercss.com/"><span class="text-secondary">page css</span></a>.<br/>
+                Thank you. ssong
                 </p>
                 </article>
             <div className="wrap_main_item1">

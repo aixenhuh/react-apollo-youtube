@@ -59,7 +59,7 @@ export function LayoutComponent () {
                                 </form>
                             </div>
                             <div className="wrap_item2">
-                                <ButtonToggle color="primary" onClick={(e)=>searchYoutube()} >primary</ButtonToggle>{' '}
+                                <ButtonToggle color="primary" onClick={(e)=>searchYoutube()} >Search</ButtonToggle>{' '}
                             </div>
                         </div>
                     </div>
